@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irmãos Oliveira - Catálogo de Beleza & Cosméticos</title>
+    <style>
+        :root {
+            --primary-color: #d4a373;
+            --secondary-color: #25d366;
+            --dark-color: #1a1a1a;
+            --light-color: #f8f9fa;
+            --gray-color: #6c757d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: var(--primary-color);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 0.5rem auto 0;
+        }
+
+        .grid-products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Espaço reservado para as imagens */
+        .image-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-ref {
+            font-size: 0.85rem;
+            color: var(--gray-color);
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1eb954;
+        }
+
+        /* Depoimentos */
+        .testimonials-section {
+            background-color: white;
+            padding: 3rem 1rem;
+            border-radius: 10px;
+            margin-bottom: 4rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>IRMÃOS OLIVEIRA</h1>
+        <p>Cosméticos & Maquiagens de Alta Qualidade</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Nosso Catálogo</h2>
+        
+        <div class="grid-products">
+
+            <!-- Produto 1 -->
+            <div class="product-card">
+                <div class="image-placeholder">Insira a imagem aqui</div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Manteiga Hidratante Corporal Bloom Fantasy (200g)</div>
+                        <div class="product-ref">REF: AL7604</div>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 13,78</div>
+                        <a href="[link removido]" target="_blank" class="btn-whatsapp">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product-card">
+                <div class="image-placeholder">Insira a imagem aqui</div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Lush Pistachio Manteiga Hidratante (200g)</div>
+                        <div class="product-ref">REF: AL7605</div>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 13,78</div>
+                        <a href="[link removido]" target="_blank" class="btn-whatsapp">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="product-card">
+                <div class="image-placeholder">Insira a imagem aqui</div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Geleia Hidratante Corporal Intense Seduction (250ml)</div>
+                        <div class="product-ref">REF: AL7502</div>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 13,00</div>
+                        <a href="[link removido]" target="_blank" class="btn-whatsapp">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="product-card">
+                <div class="image-placeholder">Insira a imagem aqui</div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Geleia Hidratante Corporal Bloom Fantasy (250ml)</div>
+                        <div class="product-ref">REF: AL7504</div>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 13,00</div>
+                        <a href="[link removido]" target="_blank" class="btn-whatsapp">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 5 -->
+            <div class="product-card">
+                <div class="image-placeholder">Insira a imagem aqui</div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Geleia Hidratante Corporal Limão Siciliano</div>
+                        <div class="product-ref">REF: AL7508</div>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 13,00</div>
+                        <a href="[link removido]" target="_blank" class="btn-whatsapp">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 6 -->
+            <div class="product-card">
+                <div class="image-placeholder">Insira a imagem aqui</div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Geleia Hidratante Corporal Maçã Verde</div>
+                        <div class="product-ref">REF: AL7509</div>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 13,00</div>
+                        <a href="[link removido]" target="_blank" class="btn-whatsapp">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 7 -->
+            <div class="product-card">
+                <div class="image-placeholder">Insira a imagem aqui</div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Geleia Iluminadora Corporal Shimmer Fresh Vanilla</div>
+                        <div class="product-ref">REF: AL7550</div>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 12,35</div>
+                        <a href="[link removido]" target="_blank" class="btn-whatsapp">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 8 -->
+            <div class="product-card">
+                <div class="image-placeholder">Insira a imagem aqui</div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Deo Colônia Fresh Vanilla (20ml)</div>
+                        <div class="product-ref">REF: AL5100</div>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 11,04</div>
+                        <a href="[link removido]" target="_blank" class="btn-whatsapp">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 9 -->
+            <div class="product-card">
+                <div class="image-placeholder">Insira a imagem aqui</div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Hair Mist Perfume Capilar Fresh Vanilla (15ml)</div>
+                        <div class="product-ref">REF: AL8001</div>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 10,40</div>
+                        <a href="[link removido]" target="_blank" class="btn-whatsapp">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 10 -->
+            <div class="product-card">
+                <div class="image-placeholder">Insira a imagem aqui</div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Sabonete Líquido Corpo e Rosto Fresh Vanilla (200ml)</div>
+                        <div class="product-ref">REF: AL7201</div>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 8,97</div>
+                        <a href="[link removido]" target="_blank" class="btn-whatsapp">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 11 -->
+            <div class="product-card">
+                <div class="image-placeholder">Insira a imagem aqui</div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Mousse de Limpeza Facial Rosa Mosqueta (150ml)</div>
+                        <div class="product-ref">REF: AL0801</div>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 11,44</div>
+                        <a href="[link removido]" target="_blank" class="btn-whatsapp">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 12 -->
+            <div class="product-card">
+                <div class="image-placeholder">Insira a imagem aqui</div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Mousse de Limpeza Facial Vitamina C (150ml)</div>
+                        <div class="product-ref">REF: AL0802</div>
+                    </div>
+                    <div>
+                        <div class="product-price">R$ 11,44</div>
+                        <a href="[link removido]" target="_blank" class="btn-whatsapp">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Seção de Depoimentos -->
+        <div class="testimonials-section">
+            <h2 class="section-title">O que nossos clientes dizem</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Os produtos chegaram super rápido! A qualidade é excelente e o atendimento pelo WhatsApp foi perfeito."</p>
+                    <p class="testimonial-author">- Mariana S.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Comprei a Geleia Iluminadora e amei o brilho e o cheiro. Com certeza comprarei mais vezes na Irmãos Oliveira!"</p>
+                    <p class="testimonial-author">- Camila R.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Atendimento nota 1000! Os hidratantes são ótimos e o preço super justo."</p>
+                    <p class="testimonial-author">- Fernanda L.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Irmãos Oliveira. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
